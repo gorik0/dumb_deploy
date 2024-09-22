@@ -1,6 +1,9 @@
 name: CI
 
-on: workflow_dispatch
+on:
+  push:
+    branches:
+      - master
 
 env:
   REGISTRY: "gorik0"
@@ -33,7 +36,7 @@ jobs:
         run: go test ./...
   build_and_push:
     runs-on: ubuntu-latest
-    if: github.event_name == 'workflow_dispatch'
+    if: github.event_name == 'push'
     environment: docker_token
     needs: test
     steps:
