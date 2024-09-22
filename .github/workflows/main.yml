@@ -63,7 +63,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ${{ secret.LOG }}/clockbox:latest
+          tags: ${{ secrets.LOG }}/clockbox:latest
 #
 
 #      - name: Install doctl
