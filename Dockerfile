@@ -26,4 +26,4 @@ COPY --from=build /godocker /godocker
 
 
 
-ENTRYPOINT ["/godocker"]
+ENTRYPOINT ["echo"]
