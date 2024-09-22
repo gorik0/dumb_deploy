@@ -14,9 +14,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+
       - name: Checkout master
         uses: actions/checkout@v2
 
+      - name: Check VAR
+        run: echo ${{ secrets.DOCKER_USERNAME }}
       - name: Set up Go 1.22
         uses: actions/setup-go@v2
         with:
