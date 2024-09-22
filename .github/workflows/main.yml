@@ -29,9 +29,8 @@ jobs:
         run: go test ./...
   build_and_push:
     runs-on: ubuntu-latest
-
+    if: github.event_name == 'workflow_dispatch'
     needs: test
-
     steps:
       - name: Checkout master
         uses: actions/checkout@v2
