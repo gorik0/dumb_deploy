@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app:
+    command:
+      - "from compose "
+      - "goooo "
+    entrypoint: echo -e
+    build: .
+#    command:
+#      - "sd"
