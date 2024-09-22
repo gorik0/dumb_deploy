@@ -14,6 +14,6 @@ func main() {
 	http.HandleFunc("/gorik", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("Hello GORIK"))
 	})
-	panic(http.ListenAndServe(host+":"+port, nil))
+	panic(http.ListenAndServe(":"+port, nil))
 
 }
