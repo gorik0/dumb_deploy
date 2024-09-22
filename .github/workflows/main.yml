@@ -34,6 +34,7 @@ jobs:
   build_and_push:
     runs-on: ubuntu-latest
     if: github.event_name == 'workflow_dispatch'
+    environment: docker_token
     needs: test
     steps:
       - name: Checkout master
